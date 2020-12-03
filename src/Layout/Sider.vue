@@ -6,14 +6,15 @@
       :default-selected-keys="['1']"
       mode="inline"
       :inlineIndent="16"
+      @click="handleClick"
     >
       <a-menu-item key="1">
         <a-icon type="pie-chart" />
-        <span>Option 1</span>
+        <router-link to="/">Home</router-link> |
       </a-menu-item>
       <a-menu-item key="2">
         <a-icon type="desktop" />
-        <span>Option 2</span>
+        <router-link to="/about">About</router-link>
       </a-menu-item>
       <a-sub-menu key="sub1">
         <span slot="title"><a-icon type="user" /><span>User</span></span>
@@ -51,6 +52,11 @@ export default {
     return {
       collapsed: false,
     };
+  },
+  methods: {
+    handleClick(params) {
+      console.log("🚀 ~ file: Sider.vue ~ line 58 ~ params", params);
+    },
   },
 };
 </script>

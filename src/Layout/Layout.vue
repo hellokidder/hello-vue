@@ -9,6 +9,7 @@
           :style="{ padding: '24px', background: '#fff', minHeight: '360px' }"
         >
           Bill is a cat.
+          <router-view />
         </div>
       </a-layout-content>
       <a-layout-footer style="text-align: center">
